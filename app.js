@@ -8,6 +8,8 @@ const homeContent = "This is the home page";
 const contactContent = "Contact me at newton Dev"
 const about = "I am newton";
 
+app.use(express.static('public'));
+
 app.get('/', (req, res)=>{
     res.render('index',{home: homeContent, aboutMe: about, contact: contactContent});
 })
