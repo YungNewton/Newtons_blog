@@ -7,6 +7,7 @@ app.set('view engine', 'ejs');
 const homeContent = "This is the home page";
 const contactContent = "Contact me at newton Dev"
 const about = "I am newton";
+var postArray = [];
 
 app.use(express.static('public'));
 
@@ -24,7 +25,13 @@ app.get('/compose', (req, res)=>{
 })
 
 app.post("/",(req, res)=>{
+    let newPost = {
+        Title : req.body.title,
+        Post : req.body.post
+    }
+    postArray.push(newPost);
     console.log(req.body.post);
+    res.redirect("/");
 })
 app.listen(port, ()=>{
     console.log("server running on port "+port);
