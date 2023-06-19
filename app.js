@@ -8,10 +8,7 @@ const homeContent = "This is the home page";
 const contactContent = "Contact me at newton Dev"
 const about = "I am newton";
 let postArray = [];
-var lodash = require('lodash');
-var lodash_core = require('lodash/core');
-var fp = require('lodash/fp');
- 
+var _ = require('lodash');
 // Load method categories.
 var array = require('lodash/array');
 var object = require('lodash/fp/object');
@@ -46,11 +43,10 @@ app.post("/",(req, res)=>{
 
 app.get("/post/:postName",(req, res)=>{
     postArray.forEach((Each_post)=>{
-        if( (_.lowerCase(Each_post.Title)) == (_.lowerCase(req.params.postName))){
-            res.render('posts', {ItemsList: Each_post});
-            res.send();
+        if( (_.lowerCase(Each_post.Title)) === (_.lowerCase(req.params.postName))){
+            res.render('posts', {place: Each_post.Title, ItemsList: Each_post});
         }else{
-
+            res.redirect('/')
         }
     })
 })
