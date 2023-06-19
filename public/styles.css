@@ -51,3 +51,13 @@ input[name="post"]{
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+.tit{
+    text-align: left;
+    z-index: -1;
+    margin-top: 10px;
+    padding-left: 70px;
+}
+textarea{
+    width: 80%;
+    height: 200px;
+}
