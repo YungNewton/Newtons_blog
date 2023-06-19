@@ -11,7 +11,16 @@ const about = "I am newton";
 app.use(express.static('public'));
 
 app.get('/', (req, res)=>{
-    res.render('index');
+    res.render('index', {place: 'Home'});
+    res.send();
+})
+app.get('/about', (req, res)=>{
+    res.render('about', {place: 'About'});
+    res.send();
+})
+app.get('/contactUs', (req, res)=>{
+    res.render('contact', {place: 'ContactUs'});
+    res.send();
 })
 
 app.listen(port, ()=>{

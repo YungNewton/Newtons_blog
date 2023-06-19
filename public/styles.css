@@ -1,3 +1,4 @@
+
 .navbar-brand{
     z-index: 10;
     opacity: 1;
@@ -11,16 +12,27 @@
 }
 .Home, .About, .Contact{
     font-size: 18px;
-    padding: 30px;
+    margin: 30px;
 }
 .Home{
-    padding-left: 800px;
+    margin-left: 800px;
 }
-body{
+.main{
     background-image: url("https://images.unsplash.com/photo-1612152916525-a569e78ed905?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHB1cnBsZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60");
     background-size: cover;
+    height: 50vh;
 }
 .container-fluid{
     background-color: inherit;
 
 }
+body{
+    height: 1000px;
+}
+.header{
+    margin-top:20vh;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
