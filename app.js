@@ -32,6 +32,10 @@ app.post("/",(req, res)=>{
     postArray.push(newPost);
     res.redirect("/");
 })
+
+app.get("/post/:postName",(req, res)=>{
+    console.log(req.params.postName);
+})
 app.listen(port, ()=>{
     console.log("server running on port "+port);
 })
