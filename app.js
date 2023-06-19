@@ -12,17 +12,20 @@ app.use(express.static('public'));
 
 app.get('/', (req, res)=>{
     res.render('index', {place: 'Home'});
-    res.send();
 })
 app.get('/about', (req, res)=>{
     res.render('about', {place: 'About'});
-    res.send();
 })
 app.get('/contactUs', (req, res)=>{
     res.render('contact', {place: 'ContactUs'});
-    res.send();
+})
+app.get('/compose', (req, res)=>{
+    res.render('compose', {place: 'Compose'});
 })
 
+app.post("/",(req, res)=>{
+    console.log(req.body.post);
+})
 app.listen(port, ()=>{
     console.log("server running on port "+port);
 })

@@ -35,4 +35,19 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: larger;
 }
+input{
+    margin-top: 20px;
+    text-align: center;
 
+}
+input[type="text"]{
+    width: 80%;
+}
+input[name="post"]{
+    text-align: left;
+    padding-bottom: 300px;
+}
+.create{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
