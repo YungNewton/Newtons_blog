@@ -8,6 +8,17 @@ const homeContent = "This is the home page";
 const contactContent = "Contact me at newton Dev"
 const about = "I am newton";
 let postArray = [];
+var lodash = require('lodash');
+var lodash_core = require('lodash/core');
+var fp = require('lodash/fp');
+ 
+// Load method categories.
+var array = require('lodash/array');
+var object = require('lodash/fp/object');
+ 
+// Cherry-pick methods for smaller browserify/rollup/webpack bundles.
+var at = require('lodash/at');
+var curryN = require('lodash/fp/curryN');
 
 app.use(express.static('public'));
 
@@ -34,7 +45,14 @@ app.post("/",(req, res)=>{
 })
 
 app.get("/post/:postName",(req, res)=>{
-    console.log(req.params.postName);
+    postArray.forEach((Each_post)=>{
+        if( (_.lowerCase(Each_post.Title)) == (_.lowerCase(req.params.postName))){
+            res.render('posts', {ItemsList: Each_post});
+            res.send();
+        }else{
+
+        }
+    })
 })
 app.listen(port, ()=>{
     console.log("server running on port "+port);
