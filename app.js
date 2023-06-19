@@ -7,12 +7,12 @@ app.set('view engine', 'ejs');
 const homeContent = "This is the home page";
 const contactContent = "Contact me at newton Dev"
 const about = "I am newton";
-var postArray = [];
+let postArray = [];
 
 app.use(express.static('public'));
 
 app.get('/', (req, res)=>{
-    res.render('index', {place: 'Home'});
+    res.render('index', {place: 'Home', ItemsList: postArray});
 })
 app.get('/about', (req, res)=>{
     res.render('about', {place: 'About'});
@@ -26,11 +26,10 @@ app.get('/compose', (req, res)=>{
 
 app.post("/",(req, res)=>{
     let newPost = {
-        Title : req.body.title,
-        Post : req.body.post
+        Title: req.body.title,
+        Post: req.body.post
     }
     postArray.push(newPost);
-    console.log(req.body.post);
     res.redirect("/");
 })
 app.listen(port, ()=>{

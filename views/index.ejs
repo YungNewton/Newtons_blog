@@ -1,2 +1,10 @@
 <%- include('header'); -%>
+<ul>
+    <%for(let i =0; i<ItemsList.length; i++){ %>
+        <li>
+            <h2><%=ItemsList[i].Title%></h2>
+            <p><%=ItemsList[i].Post%></p>
+        </li>
+    <%}%>
+</ul>
 <%- include('footer'); -%>
