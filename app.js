@@ -14,7 +14,6 @@ var _ = require('lodash');
 var array = require('lodash/array');
 var object = require('lodash/fp/object');
  
-// Cherry-pick methods for smaller browserify/rollup/webpack bundles.
 var at = require('lodash/at');
 var curryN = require('lodash/fp/curryN');
 
