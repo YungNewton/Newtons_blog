@@ -9,6 +9,7 @@ const contactContent = "Contact me at newton Dev"
 const about = "I am newton";
 let postArray = [];
 var _ = require('lodash');
+
 // Load method categories.
 var array = require('lodash/array');
 var object = require('lodash/fp/object');
